@@ -1,0 +1,38 @@
+Manuel Testing 
+
+# New User -
+
+ firstname   -  Bob
+ lastname    - Smith
+ User Name   -  BS23
+ Email       - BBSMTH@MAIL.COM	
+ Company     - EG Events	
+ Address Ln1 - Block D
+ Address Ln2 -  123 fake rd 
+ City        -  Aberdeen
+ Postcode    - ab25 1wu
+ Password    - fakeApp87
+ UserRole    - Event Organiser
+ 
+#Edit Of detials 
+
+Email    -  Events@EgE.co.uk
+Password - Sec65UY90s
+
+# Enquiry
+
+ Event                  - Half term Blitz
+ Subject                - Dates
+ Message                - If available for 3 instead of 2 days
+ Special Requirements   - Extra Robe
+ 
+#  Facility
+
+Name         - 205
+Value        - 800
+Description  - Large room  for numbesr up to 300
+Type         -  Conference
+
+# Delete user with Username BS23 
+ # Delete event with id 001 - all field that casade down are 
+ deleted however an event with 001 id can never be readded

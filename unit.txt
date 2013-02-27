@@ -1,0 +1,59 @@
+
+import javax.validation.ConstraintViolation;
+
+import junit.framework.Assert;
+
+import models.User;
+
+import org.junit.Test;
+import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
+
+
+public class VenueDBTest {
+  private LocalValidatorFactoryBean localValidatorFactory;
+  
+@Test
+public void testEmail() {
+ final User user = new User();
+ user.setEmail("examplefail0mail.com");
+ Set<ConstraintViolation<User>> constraintViolations = localValidatorFactory.validate(user);
+ Assert.assertTrue("Expected validation error not found", constraintViolations.size() == 1);
+}
+
+@Test
+public void testNewUser(){
+ final User user = new User();
+ user.setUserName("UB35");
+ user.setPassword("Ut23!!ou25");
+ user.setFirstName("Alex");
+ user.setEmail("examplefail0mail.com");
+ user.setLastname("jimbo");
+ user.setCompany("lxevents");
+ user.setAddressline1(" 201 bonaccord")
+ user.setAddressline2(" bonaccord")
+ user.setCity("Aberdeen")
+ user.setPostcode("AB245AH")
+ user.setUserole("venue owner")
+ Set<ConstraintViolation<User>> constraintViolations = localValidatorFactory.validate(user);
+ Assert.assertTrue("Expected validation error not found", constraintViolations.size() == 1);
+}
+
+@Test
+public void testDeleteUser() 
+{
+ String user = "SELECT * FROM User Username = UB35  "
+ DatabaseOperation.DELETE;  
+  
+  }
+  
+@Test
+public void save() {
+  running(venue4us-experimental(), new Runnable() {
+    public void run() {
+     UserRole = new UserRole("Event Organiser");
+      UserRole.save();
+      assertThat(UserRole.id).isNotNull();
+    }
+  });
+
+}
